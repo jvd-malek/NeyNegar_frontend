@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  body {
+    @apply dark:bg-slate-800 transition-colors dark:text-white
+  }
+
+  @font-face {
+    font-family: Lemon;
+    src: url(../public/Font/Lemon-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Vazir;
+    src: url(../public/Font/Vazir.ttf);
+  }
+
+  @font-face {
+    font-family: Soofee;
+    src: url(../public/Font/W_soofee.ttf);
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply dark:bg-slate-500 bg-slate-300
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-sky-300 transition-colors hover:bg-sky-400 dark:bg-white dark:hover:bg-sky-300
+  }
+
+}
+
+@layer utilities {
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+  }
+}
+
+
+/* custome class */
+@layer components {
+  .btn {
+    @apply rounded-2xl text-lg text-white bg-gradient-to-tr from-sky-600 to-sky-700 py-2 px-4
+  }
+
+  .headerStyle {
+    @apply flex gap-8 items-center
+  }
+
+  .navbarFixed {
+    @apply z-50 transition-all w-full fixed top-0 -translate-x-1/2 left-1/2 py-4 px-4 text-xl dark:text-white text-sky-800
+  }
+
+  .scrolledNavbarFixed {
+    @apply w-[90%] py-1 lg:py-4 px-4 text-xl text-sky-800 bg-glassh dark:bg-dark-glassh dark:text-white fixed top-3 -translate-x-1/2 left-1/2 rounded-xl dark:shadow-css shadow-cs container z-50 transition-all duration-300
+  }
+
+  .gradientt:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #fff0, #fffc 74.19%, #fff);
+    @apply rounded-xl
+  }
+
+  .scrolledNavbarFixed .color {
+    @apply text-sky-600 dark:text-white transition-all
+  }
+
+  .bg {
+    background-image: url("../public/beams-basic.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @apply dark:bg-none dark:bg-cover transition-all duration-300
+  }
+
+  .navbarFixed .color {
+    @apply text-sky-600 dark:text-white transition-all
+  }
+
+  .shadow-cs {
+    box-shadow: 0 3px 26px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-css {
+    box-shadow: 0 3px 26px rgba(0, 0, 0, 0.4);
+  }
+
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .bg-dark-glass {
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .bg-glassh {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .bg-dark-glassh {
+    background: rgba(30, 41, 59, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .loader {
+    width: 4px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+    transform: translateX(-38px);
+    animation: l21 .7s infinite alternate linear;
+  }
+
+  @keyframes l21 {
+    50% {
+      box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px
+    }
+
+    100% {
+      box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px
+    }
+  }
+
+  .bg-vije {
+    @apply md:bg-[url('../public/Imgs/vije4.png')] bg-[url('../public/Imgs/vije1.png')] bg-cover lg:mt-12 mt-6 rounded-2xl mx-auto w-[82vw]
+  }
+
+  .gr1 {
+    background: hsla(217, 94%, 69%, 1);
+    background: linear-gradient(135deg, hsla(217, 94%, 69%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(217, 94%, 69%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(217, 94%, 69%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#649DFA", endColorstr="#60efff", GradientType=1);
+  }
+
+  .gr1dark {
+    background: hsla(217, 33%, 17%, 1);
+  }
+
+  .gr2dark {
+    background: hsla(215, 19%, 35%, 1);
+    box-shadow: 0 3px 26px 0 rgba(31, 38, 135, 0.4);
+  }
+
+  .gr11 {
+    background: hsla(217, 94%, 69%, 0.4);
+    background: linear-gradient(135deg, hsla(217, 94%, 69%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    background: -moz-linear-gradient(135deg, hsla(217, 94%, 69%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(217, 94%, 69%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#649DFA", endColorstr="#60efff", GradientType=1);
+  }
+
+  .gr2 {
+    background: hsla(152, 97%, 76%, 1);
+    background: linear-gradient(135deg, hsla(152, 97%, 76%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(152, 97%, 76%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(152, 97%, 76%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#89FDC7", endColorstr="#60efff", GradientType=1);
+  }
+
+  .gr22 {
+    background: hsla(152, 97%, 76%, 0.4);
+    background: linear-gradient(135deg, hsla(152, 97%, 76%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    background: -moz-linear-gradient(135deg, hsla(152, 97%, 76%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(152, 97%, 76%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#89FDC7", endColorstr="#60efff", GradientType=1);
+  }
+
+  .gr3 {
+    background: hsla(58, 100%, 68%, 1);
+    background: linear-gradient(135deg, hsla(58, 100%, 68%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(58, 100%, 68%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(58, 100%, 68%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ff930f", endColorstr="#fff95b", GradientType=1);
+  }
+
+  .gr33 {
+    background: hsla(58, 100%, 68%, 0.4);
+    background: linear-gradient(135deg, hsla(58, 100%, 68%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    background: -moz-linear-gradient(135deg, hsla(58, 100%, 68%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(58, 100%, 68%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ff930f", endColorstr="#fff95b", GradientType=1);
+  }
+
+  .gr4 {
+    background: hsla(274, 100%, 70%, 1);
+    background: linear-gradient(135deg, hsla(274, 100%, 70%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(274, 100%, 70%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(274, 100%, 70%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#BD66FF", endColorstr="#60efff", GradientType=1);
+  }
+
+  .gr44 {
+    background: hsla(274, 100%, 70%, 0.4);
+    background: linear-gradient(135deg, hsla(274, 100%, 70%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    background: -moz-linear-gradient(135deg, hsla(274, 100%, 70%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(274, 100%, 70%, 0.4) 0%, hsla(186, 100%, 69%, 0.4) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#BD66FF", endColorstr="#60efff", GradientType=1);
+  }
+
+  .activeLink {
+    @apply gr1 dark:gr1dark rounded-lg
+  }
+}
